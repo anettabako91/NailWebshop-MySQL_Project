@@ -1,10 +1,4 @@
-la fel si la mysql - detalii despre baza de date pe care am creat-o , introducere cu un screenshot - schema baza de date - reverse engeneering - 
-structura si legatura dintre tabele cate tabele, ce tipuri de date, legtura dintre tabele, ce instructiuni - ddl/dml/dql ddl definire - 
-creare, primary, foreign key dml - inserare date, stergere dql - interogari , mai simple si mai complexe
-
-la sfarsit link catre fisier de tip sq
-
-### Proiect NailWebshop
+### Proiect NailWebshop - MySQL
 
 #### Descriere
 
@@ -53,11 +47,26 @@ one-to-one, 'comenzi_produsedebaza' fiind o tabela creata ulterior, pe baza tabe
 'comenzi_produsedebaza' si 'produsedebaza' s-a format o relatie one-to-one.
 
 ### Primary and foreign key
-Primary key - adica cheia primara este o coloana sau un set de coloane care pot servi drept identificator unic pentru fiecare rand din tabela (cu asta ne intalnim cel mai des), 
+Primary key - adica cheia primara este o coloana sau un set de coloane care pot servi drept identificator unic pentru fiecare rand din tabela, 
 iar cheia secundara/foreign key este un potential identificator, ea ne ajuta sa facem legatura cu alte tabele; tot timpul va contine valori care exista deja pe cheia primara din 
 tabela parinte. 
-In cazul bazei de date 'NailWebshop' fiecare tabela are ca primay key id-ul, definit la momentul crearii tabelelor, iar ulterior la tabela 'comenzi' am adaugat cheile secundare, 
-facand referire la restul tabelelor (vezi mai jos)
+In cazul bazei de date 'NailWebshop' fiecare tabela are ca primay key id-ul, definit la momentul crearii tabelelor, alaturi de atributul AUTO_INCREMENT, care genereaza automat un numar
+intreg ori de cate ori se insereaza un rand nou in tabele, iar ulterior la tabela 'comenzi' am adaugat cheile secundare, facand referire la restul tabelelor, astfel tabela 'comenzi' a
+devenit TABELA PARINTE, iar restul sunt TABELE COPIII (vezi mai jos)
+
 ![foreign key](https://github.com/anettabako91/NailWebshop-MySQL_Project/blob/main/adaugare%20foreign%20key.png)
 
-  
+### SQL Join
+Join-urile sunt folosite pentru a combina date sau randuri din doua sau mai multe tabele. Fiecare instructiune SELECT poate folosi una sau mai multe metode JOIN:
+-CROSS JOIN
+-INNER JOIN
+-LEFT JOIN
+-RIGHT JOIN
+
+In cazul bazei de date 'NailWebShop' am folosit inner join, selectand toate randurile din doua sau mai multe tabele atata timp cat conditia a fost indeplinita, si right join, 
+care a returnat toate înregistrările din tabela din dreapta și înregistrările potrivite din tabela din stânga, indeplinind anumite conditii (vezi mai jos cateva exemple)
+
+![join](https://github.com/anettabako91/NailWebshop-MySQL_Project/blob/main/inner%20si%20right%20join.png)
+
+Intregul proiect poate fi gasit aici : [ProiectSQL](https://github.com/anettabako91/NailWebshop-MySQL_Project/blob/main/nailwebshop.sql)
+
