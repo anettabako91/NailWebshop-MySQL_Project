@@ -1,6 +1,6 @@
 ### Proiect NailWebshop - MySQL
 
-#### Descriere
+### Descriere
 
 1. DDL - Data Definition Language
 Acest proiect reprezinta crearea unei baze de date, ce poate fi folosit de catre un magazin online cu produse destinate manichiurii si unghiilor tehnice.
